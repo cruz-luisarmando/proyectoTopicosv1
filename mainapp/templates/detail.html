@@ -1,0 +1,16 @@
+{% extends "layout.html"%}
+
+{% block title %}Tutorial{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <a class="btn" href="{% url 'mainapp:printpdf' tutorial_object_lac.id %}">PDF</a>
+    <br />
+    <h1>{{ tutorial_object_lac }}</h1>
+    <br />
+    {{ tutorial_object_lac.contenido_tutorial_lac|safe }}
+    <br />
+    <info>Ultima revisión: {{ tutorial_object_lac.fecha_cambio_lac }}</info>
+</div>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "admin/base.html" %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Topicos_lac Admin') }}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'mainapp:index' %}">Topicos_lac Administracion</a></h1>
+Usuario: default<br/>Password: django12345
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

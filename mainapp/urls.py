@@ -18,7 +18,9 @@ from django.urls import path
 from mainapp import views
 
 
+app_name='mainapp'
 urlpatterns = [
-    path('', views.index, name="index"),
-    path('homepage/', views.homepage, name='homepage')
+    path('', views.index_lac, name="index"),
+    path('homepage/', views.homepage_lac, name='homepage'),
+    path('<int:pk>/detail/', views.detailViewLac.as_view(), name='detail'),
 ]
